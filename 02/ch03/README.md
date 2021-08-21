@@ -28,4 +28,3 @@
     ```
 2. Elastic IP(고정IP): 아파치 웹 서버 접속
 3. Network Interface Card (NIC) 추가: 2개의 고정 IP로 2개의 웹사이트를 운영
-4.
