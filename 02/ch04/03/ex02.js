@@ -17,7 +17,7 @@ ec2.runInstances({
     },
     DryRun: false,
     InstanceType: 't2.micro',
-    KeyName: 'mykey2'
+    KeyName: 'mykey'
 }, function (error, data) {
     if (error) {
         console.log(error, error.stack);
