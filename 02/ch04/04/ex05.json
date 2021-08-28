@@ -53,7 +53,7 @@
 					  		}
 						},
 						"files": {
-							"/var/www/html/index.html" : "",
+							"/var/www/html/index.html" : "https://raw.githubusercontent.com/GraceDevMin/aws-practices/main/02/ch04/04/index.html",
 							"mode" : "000644",
 							"owner" : "apache",
 							"group" : "apache"
