@@ -1,0 +1,100 @@
+[ex3]-----------------------------
+$ aws cloudformation create-stack --stack-name myserver --template-body https://raw.githubusercontent.com/GraceDevMin/aws-practices/main/02/ch04/04/ex03.json --parameters ParameterKey=KeyName,ParameterValue=mykey ParameterKey=VPC,ParameterValue=vpc-198e1072 ParameterKey=InstanceType,ParameterValue=t2.micro
+
+$ aws cloudformation describe-stacks --stack-name myserver --query Stacks[0].Outputs
+
+$ aws cloudformation delete-stack --stack-name myserver
+
+
+[ex4]-----------------------------
+
+$ aws cloudformation create-stack --stack-name myserver --template-body https://raw.githubusercontent.com/GraceDevMin/aws-practices/main/02/ch04/04/ex04.json --parameters ParameterKey=KeyName,ParameterValue=mykey ParameterKey=VPC,ParameterValue=vpc-198e1072 ParameterKey=InstanceType,ParameterValue=t2.micro
+
+$ aws cloudformation describe-stacks --stack-name myserver --query Stacks[0].Outputs
+
+$ aws cloudformation delete-stack --stack-name myserver
+
+https://raw.githubusercontent.com/GraceDevMin/aws-practices/main/02/ch04/04/mysite.tar.gz
+
+[ex5]-----------------------------
+
+$ aws cloudformation create-stack --stack-name myserver --template-body https://raw.githubusercontent.com/GraceDevMin/aws-practices/main/02/ch04/04/ex05.json --parameters ParameterKey=KeyName,ParameterValue=mykey ParameterKey=VPC,ParameterValue=vpc-198e1072 ParameterKey=InstanceType,ParameterValue=t2.micro
+
+$ aws cloudformation describe-stacks --stack-name myserver --query Stacks[0].Outputs
+
+$ aws cloudformation delete-stack --stack-name myserver
+
+
+[ex6]-----------------------------
+
+$ aws cloudformation create-stack --stack-name myserver --template-body https://raw.githubusercontent.com/GraceDevMin/aws-practices/main/02/ch04/04/ex06.json --parameters ParameterKey=KeyName,ParameterValue=mykey ParameterKey=VPC,ParameterValue=vpc-198e1072 ParameterKey=InstanceType,ParameterValue=t2.micro
+
+$ aws cloudformation describe-stacks --stack-name myserver --query Stacks[0].Outputs
+
+$ aws cloudformation delete-stack --stack-name myserver
+
+[ex7]-----------------------------
+
+$ aws cloudformation create-stack --stack-name myserver --template-body https://raw.githubusercontent.com/GraceDevMin/aws-practices/main/02/ch04/04/ex07.json --parameters ParameterKey=KeyName,ParameterValue=mykey ParameterKey=VPC,ParameterValue=vpc-198e1072 ParameterKey=InstanceType,ParameterValue=t2.micro
+
+$ aws cloudformation describe-stacks --stack-name myserver --query Stacks[0].Outputs
+
+$ aws cloudformation delete-stack --stack-name myserver
+
+[ex8]-----------------------------
+
+$ aws cloudformation create-stack --stack-name myserver --template-body https://raw.githubusercontent.com/GraceDevMin/aws-practices/main/02/ch04/04/ex08.json --parameters ParameterKey=KeyName,ParameterValue=mykey ParameterKey=VPC,ParameterValue=vpc-198e1072 ParameterKey=InstanceType,ParameterValue=t2.micro
+
+$ aws cloudformation describe-stacks --stack-name myserver --query Stacks[0].Outputs
+
+$ aws cloudformation delete-stack --stack-name myserver
+
+[ex9]-----------------------------
+
+$ aws cloudformation create-stack --stack-name myserver --template-body https://raw.githubusercontent.com/GraceDevMin/aws-practices/main/02/ch04/04/ex09.json --parameters ParameterKey=KeyName,ParameterValue=mykey ParameterKey=VPC,ParameterValue=vpc-198e1072 ParameterKey=InstanceType,ParameterValue=t2.micro
+
+$ aws cloudformation describe-stacks --stack-name myserver --query Stacks[0].Outputs
+
+$ aws cloudformation delete-stack --stack-name myserver
+
+
+[ch05-ex5]-----------------------------
+
+$ aws cloudformation create-stack --stack-name myserver --template-body https://raw.githubusercontent.com/GraceDevMin/aws-practices/main/02/ch05/03/ex05.json --parameters ParameterKey=KeyName,ParameterValue=mykey ParameterKey=VPC,ParameterValue=vpc-198e1072 ParameterKey=InstanceType,ParameterValue=t2.micro --capabilities CAPABILITY_NAMED_IAM
+
+
+$ aws cloudformation describe-stacks --stack-name myserver --query Stacks[0].Outputs
+
+$ aws cloudformation delete-stack --stack-name myserver
+
+
+EC2(깡통)
+
+| - 프로그램 설치
+| - 파일 생성(설정 파일, 애플리케이션 소스)
+| - 서비스 등록
+
+
+서버애플리케이션 실행
+
+$ yum install httpd
+$ systemctl enable httpd
+$ vi /var/www/html/inex.html
+$ vi /etc/www/conf.d/vhost.conf
+
+$ yum install node
+$ mkdir /myapp
+$ cd /myapp
+$ npm install
+$ node index.js
+
+
+
+
+https://github.com/GraceDevMin/myapp-basic/tarball/main
+
+
+aws iam list-policies --query "Policies[?PolicyName=='AdministratorAccess'].Arn"
+arn:aws:iam::aws:policy/AdministratorAccess
+
+curl http://169.254.169.254/latest/meta-data/instance-id
